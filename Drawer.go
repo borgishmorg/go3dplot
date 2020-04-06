@@ -28,6 +28,11 @@ type Range struct {
 	end   float64
 }
 
+//GetRange return new range: [start:end]
+func GetRange(start, end float64) Range {
+	return Range{start, end}
+}
+
 //Drawer interface
 type Drawer interface {
 	Draw(x, y []float64, u [][]float64, filename string) error
